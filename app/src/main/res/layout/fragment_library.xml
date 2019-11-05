@@ -3,14 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LibraryFragment"
 
     >
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/wood"
-        tools:context=".LibraryFragment">
+        >
+
 
         <TextView
             android:id="@+id/Title_text"
@@ -28,7 +32,7 @@
 
         <ImageButton
             android:id="@+id/Book_image1"
-            android:layout_width="wrap_content"
+            android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:src="@drawable/book1"
@@ -50,7 +54,7 @@
 
         <ImageButton
             android:id="@+id/Book_image3"
-            android:layout_width="wrap_content"
+            android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:src="@drawable/book3"
@@ -58,7 +62,75 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/Book_image2" />
+
+        <ImageButton
+            android:id="@+id/Book_image4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Book_image5"
+            app:layout_constraintEnd_toStartOf="@+id/Book_image5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/book4" />
+
+        <ImageButton
+            android:id="@+id/Book_image5"
+            android:layout_width="wrap_content"
+            android:layout_height="139dp"
+            android:layout_marginTop="180dp"
+            app:layout_constraintEnd_toStartOf="@+id/Book_image7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Book_image4"
+            app:layout_constraintTop_toTopOf="@+id/Book_image2"
+            app:srcCompat="@drawable/book5" />
+
+        <ImageButton
+            android:id="@+id/Book_image6"
+            android:layout_width="101dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Book_image8"
+            app:layout_constraintEnd_toStartOf="@+id/Book_image8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/book6" />
+
+        <ImageButton
+            android:id="@+id/Book_image7"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Book_image5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Book_image5"
+            app:srcCompat="@drawable/book7" />
+
+        <ImageButton
+            android:id="@+id/Book_image8"
+            android:layout_width="wrap_content"
+            android:layout_height="139dp"
+            android:layout_marginTop="180dp"
+            app:layout_constraintEnd_toStartOf="@+id/Book_image9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Book_image6"
+            app:layout_constraintTop_toTopOf="@+id/Book_image5"
+            app:srcCompat="@drawable/book8" />
+
+        <ImageButton
+            android:id="@+id/Book_image9"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Book_image8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Book_image8"
+            app:srcCompat="@drawable/book9" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 </layout>
 
 

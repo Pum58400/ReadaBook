@@ -2,4 +2,5 @@
 <resources>
     <dimen name="BOOK_width">100dp</dimen>
     <dimen name="BOOK_height">120dp</dimen>
+    <dimen name="BOOK_margin">70dp</dimen>
 </resources>

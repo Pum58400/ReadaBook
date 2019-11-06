@@ -6,4 +6,5 @@
     <string name="about">About</string>
     <string name="anthor">Anthor: </string>
     <string name="page">Page: </string>
+    <string name="share_success_text">Share</string>
 </resources>

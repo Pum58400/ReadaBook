@@ -1,12 +1,17 @@
 package buu.example.myapp
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import buu.example.myapp.databinding.FragmentDetailBinding
+import buu.example.myapp.databinding.FragmentLibraryBinding
+import java.time.Instant
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,12 +33,46 @@ class detailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val binding = DataBindingUtil.inflate<FragmentDetailBinding>(inflater, R.layout.fragment_detail,container,false)
         // Inflate the layout for this fragment
+
+//Toast
+//        Toast.makeText(context,"Share",Toast.LENGTH_LONG).show()
+
+        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.fragment_detail, container, false)
+
+
+
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.options_menu, menu)
 
+        // check if the activity resolves
+        if (null == getShareIntent().resolveActivity(activity!!.packageManager)) {
+            // hide the menu item if it doesn't resolve
+            menu?.findItem(R.id.Share)?.setVisible(false)
+        }
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item!!.itemId) {
+            R.id.Share -> shareSuccess()
+        }
 
+        return super.onOptionsItemSelected(item)
 
+    }
+    private fun getShareIntent() : Intent {
 
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain")
+            .putExtra(Intent.EXTRA_TEXT, getString(R.string.share_success_text))
+
+        return shareIntent
+    }
+    private fun shareSuccess() {
+        startActivity(getShareIntent())
+    }
 }

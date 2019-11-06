@@ -16,10 +16,19 @@
         android:id="@+id/detailFragment"
         android:name="buu.example.myapp.detailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_BOOK1_1Fragment"
+            app:destination="@id/BOOK1_1Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="buu.example.myapp.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/BOOK1_1Fragment"
+        android:name="buu.example.myapp.BOOK1_1Fragment"
+        android:label="BOOK1_1Fragment"
+        tools:layout="@layout/fragment_blank" />
 </navigation>

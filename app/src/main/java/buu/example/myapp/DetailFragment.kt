@@ -12,6 +12,9 @@ import androidx.navigation.findNavController
 import buu.example.myapp.databinding.FragmentDetailBinding
 import buu.example.myapp.databinding.FragmentLibraryBinding
 import java.time.Instant
+import android.R.attr.data
+
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,8 +37,15 @@ class detailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        Toast.makeText(context,"BOOK1", Toast.LENGTH_LONG).show();
 
         val binding = DataBindingUtil.inflate<FragmentDetailBinding>(inflater, R.layout.fragment_detail,container,false)
+        binding.NEXTButton.setOnClickListener { view : View ->
+            view.findNavController().navigate(R.id.action_detailFragment_to_BOOK1_1Fragment)
+        }
+
+
+
         setHasOptionsMenu(true)
         return binding.root
     }

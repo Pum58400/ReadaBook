@@ -2,6 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/aboutFragment"
-        android:title="@string/about" />
+        android:id="@+id/Share"
+        android:title="@string/share_success_text" />
 </menu>

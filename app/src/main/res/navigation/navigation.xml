@@ -31,4 +31,9 @@
         android:name="buu.example.myapp.BOOK1_1Fragment"
         android:label="BOOK1_1Fragment"
         tools:layout="@layout/fragment_blank" />
+    <fragment
+        android:id="@+id/listlibraryFragment"
+        android:name="buu.example.myapp.ListlibraryFragment"
+        android:label="fragment_listlibrary"
+        tools:layout="@layout/fragment_listlibrary" />
 </navigation>

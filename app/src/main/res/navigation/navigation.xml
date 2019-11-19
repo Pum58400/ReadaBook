@@ -21,7 +21,7 @@
         <action
             android:id="@+id/action_detailFragment_to_BOOK1_1Fragment"
             app:destination="@id/BOOK1_1Fragment"
-            app:popUpTo="@+id/detailFragment" />
+            app:popUpTo="@+id/libraryFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"

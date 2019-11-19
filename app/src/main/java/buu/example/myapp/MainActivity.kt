@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import buu.example.myapp.databinding.ActivityMainBinding
 import buu.example.myapp.databinding.FragmentLibraryBinding
+import timber.log.Timber
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,20 +33,22 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(binding.navView, navController)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
 
-        Log.i("MainActivity", "onCreate Called")
+//        Log.i("MainActivity", "onCreate Called")
+        Timber.i("onCreate called")
 
     }
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return NavigationUI.navigateUp(navController, drawerLayout)
-        Log.i("MainActivity", "onSupportNavigateUp Called")
+        Timber.i("onSupportNavigateUp Called")
 
     }
 
     override fun onStart() {
         super.onStart()
 
-        Log.i("MainActivity", "onStart Called")
+//        Log.i("MainActivity", "onStart Called")
+        Timber.i("onStart Called")
     }
 }
 

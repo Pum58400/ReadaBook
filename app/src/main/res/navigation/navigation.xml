@@ -10,7 +10,8 @@
         android:label="LibraryFragment" >
         <action
             android:id="@+id/action_libraryFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"
+            app:popUpTo="@+id/libraryFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -20,7 +21,7 @@
         <action
             android:id="@+id/action_detailFragment_to_BOOK1_1Fragment"
             app:destination="@id/BOOK1_1Fragment"
-            app:popUpTo="@+id/libraryFragment" />
+            app:popUpTo="@+id/detailFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -31,7 +32,7 @@
         android:id="@+id/BOOK1_1Fragment"
         android:name="buu.example.myapp.BOOK1_1Fragment"
         android:label="BOOK1_1Fragment"
-        tools:layout="@layout/fragment_blank" />
+        tools:layout="@layout/fragment_book1" />
     <fragment
         android:id="@+id/listlibraryFragment"
         android:name="buu.example.myapp.ListlibraryFragment"

@@ -3,7 +3,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="about">About</string>
+    <string name="about">About </string>
+    <string name="about_title">Even if you have read one good book in your life,
+        \nyou will know what reading gives. It gives you incomparable pleasure.
+       \n While there is no doubt about the fact that reading is a priceless activity,
+       \n it has been observed that the habit of reading has declined of late.
+       \n One of the main causes for this decline is the growth of technology.
+       \n However, what most people don’t know is there is so much to benefit from reading.
+
+    </string>
     <string name="anthor">Anthor: </string>
     <string name="page">Page: </string>
     <string name="share_success_text">Share</string>

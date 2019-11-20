@@ -1,18 +1,10 @@
-package buu.example.myapp.Addbook
+package buu.example.myapp.addbook
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import buu.example.myapp.databinding.FragmentDetailBinding
-import buu.example.myapp.databinding.FragmentLibraryBinding
-import java.time.Instant
-import android.R.attr.data
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -50,7 +42,7 @@ class AddbookFragment : Fragment() {
         )
 
         binding.buttonCancel.setOnClickListener {
-            it.findNavController().navigate(R.id.action_addbookFragment_to_showbookFragment)
+            it.findNavController().navigate(R.id.action_showbookFragment_to_addbookFragment)
         }
 
         val application = requireNotNull(this.activity).application
@@ -78,7 +70,7 @@ class AddbookFragment : Fragment() {
 
         // Inflate the layout for this fragment
 
-         binding.AddbookViewModel = viewModel
+         binding.addbookViewModel = viewModel
 
         return binding.root
     }

@@ -38,7 +38,7 @@
         tools:layout="@layout/fragment_book1" />
     <fragment
         android:id="@+id/addbookFragment"
-        android:name="buu.example.myapp.Addbook.AddbookFragment"
+        android:name="buu.example.myapp.addbook.AddbookFragment"
         android:label="fragment_addbook"
         tools:layout="@layout/fragment_addbook">
         <action
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/showbookFragment"
-        android:name="buu.example.myapp.Showbook.ShowbookFragment"
+        android:name="buu.example.myapp.showbook.ShowbookFragment"
         android:label="fragment_showbook"
         tools:layout="@layout/fragment_showbook" >
         <action

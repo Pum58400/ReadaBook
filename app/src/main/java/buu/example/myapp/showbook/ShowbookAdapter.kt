@@ -1,4 +1,4 @@
-package buu.example.myapp.Showbook
+package buu.example.myapp.showbook
 
 import android.graphics.Color
 import android.util.TypedValue

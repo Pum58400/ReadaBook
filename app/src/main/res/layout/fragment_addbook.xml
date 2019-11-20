@@ -9,7 +9,7 @@
     <data>
         <variable
             name="AddbookViewModel"
-            type="buu.example.myapp.Addbook.AddbookViewModel" />
+            type="buu.example.myapp.addbook.AddbookViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,7 +64,7 @@
             android:layout_marginStart="68dp"
             android:layout_marginTop="16dp"
             android:hint="Name book"
-            android:text="@={AddbookFragment.inputNameBook"
+            android:text="@={AddbookViewModel.inputNameBook"
             app:layout_constraintBottom_toTopOf="@+id/input_anthor"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Title_text" />
@@ -78,7 +78,7 @@
             android:layout_marginStart="68dp"
             android:layout_marginTop="16dp"
             android:hint="Anthor"
-            android:text="@={AddbookFragment.inputAnthor}"
+            android:text="@={AddbookViewModel.inputAnthor}"
             app:layout_constraintBottom_toTopOf="@+id/input_page"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_name" />
@@ -94,7 +94,7 @@
             android:layout_marginStart="68dp"
             android:layout_marginTop="16dp"
             android:hint="Page"
-            android:text="@={AddbookFragment.inputPage}"
+            android:text="@={AddbookViewModel.inputPage}"
             app:layout_constraintBottom_toTopOf="@+id/Confrim_btn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_anthor" />

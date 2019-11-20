@@ -7,9 +7,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import buu.example.myapp.R
-import buu.example.myapp.Showbook.ShowbookAdapter
-import buu.example.myapp.Showbook.ShowbookViewModel
-import buu.example.myapp.Showbook.ShowbookViewModelFactory
+import buu.example.myapp.showbook.ShowbookAdapter
+import buu.example.myapp.showbook.ShowbookViewModel
+import buu.example.myapp.showbook.ShowbookViewModelFactory
 import buu.example.myapp.database.Roomdb
 import buu.example.myapp.databinding.FragmentShowbookBinding
 

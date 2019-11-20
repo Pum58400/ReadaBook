@@ -78,7 +78,7 @@ class AddbookFragment : Fragment() {
 
         // Inflate the layout for this fragment
 
-         binding.addbookViewModel = viewModel
+         binding.AddbookViewModel = viewModel
 
         return binding.root
     }

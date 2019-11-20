@@ -10,7 +10,7 @@ abstract class Roomdb : RoomDatabase(){
 
 
     abstract val bookDao: BookDatabaseDao
-    
+
 
     companion object {
         @Volatile

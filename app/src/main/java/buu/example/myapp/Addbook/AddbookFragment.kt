@@ -1,4 +1,4 @@
-package buu.example.myapp
+package buu.example.myapp.Addbook
 
 
 import android.os.Bundle
@@ -6,23 +6,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import buu.example.myapp.databinding.FragmentLibraryBinding
 
+import buu.example.myapp.R
 
 /**
  * A simple [Fragment] subclass.
  */
-public class ListlibraryFragment : Fragment() {
+class AddbookFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
-
-        return inflater.inflate(R.layout.fragment_listlibrary, container, false)
+        return inflater.inflate(R.layout.fragment_addbook, container, false)
     }
 
 

@@ -19,4 +19,5 @@
     <string name="book">Book</string>
     <string name="simple">Simple</string>
     <string name="description">simple</string>
+    <string name="addbook">Addbook</string>
 </resources>

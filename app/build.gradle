@@ -10,7 +10,7 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
-   buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "buu.example.myapp"
         minSdkVersion 19
@@ -51,7 +51,8 @@ dependencies {
     //ViewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-
+    implementation 'androidx.room:room-runtime:2.2.1'
+    annotationProcessor 'androidx.room:room-compiler:2.2.1'
 
 
 }

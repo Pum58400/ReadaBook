@@ -41,7 +41,7 @@ class detailFragment : Fragment() {
 
         val binding = DataBindingUtil.inflate<FragmentDetailBinding>(inflater, R.layout.fragment_detail,container,false)
         binding.NEXTButton.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_detailFragment_to_BOOK1_1Fragment)
+            view.findNavController().navigate(R.id.action_detailFragment_to_bookFragment)
         }
 
 

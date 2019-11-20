@@ -42,7 +42,7 @@ class AddbookFragment : Fragment() {
         )
 
         binding.buttonCancel.setOnClickListener {
-            it.findNavController().navigate(R.id.action_showbookFragment_to_addbookFragment)
+            it.findNavController().navigate(R.id.action_addbookFragment_to_showbookFragment)
         }
 
         val application = requireNotNull(this.activity).application

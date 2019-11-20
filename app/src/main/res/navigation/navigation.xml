@@ -48,7 +48,7 @@
     <fragment
         android:id="@+id/showbookFragment"
         android:name="ShowbookFragment"
-        android:label="ShowbookFragment" >
+        android:label="ShowbookFragment">
         <action
             android:id="@+id/action_showbookFragment_to_addbookFragment2"
             app:destination="@id/addbookFragment" />

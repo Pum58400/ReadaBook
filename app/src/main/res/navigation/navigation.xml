@@ -12,6 +12,9 @@
             android:id="@+id/action_libraryFragment_to_detailFragment"
             app:destination="@id/detailFragment"
             app:popUpTo="@+id/libraryFragment" />
+        <action
+            android:id="@+id/action_libraryFragment_to_addbookFragment"
+            app:destination="@id/addbookFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -37,10 +40,18 @@
         android:id="@+id/addbookFragment"
         android:name="buu.example.myapp.Addbook.AddbookFragment"
         android:label="fragment_addbook"
-        tools:layout="@layout/fragment_addbook2"/>
+        tools:layout="@layout/fragment_addbook">
+        <action
+            android:id="@+id/action_addbookFragment_to_showbookFragment"
+            app:destination="@id/showbookFragment" />
+    </fragment>
     <fragment
         android:id="@+id/showbookFragment"
         android:name="buu.example.myapp.Showbook.ShowbookFragment"
         android:label="fragment_showbook"
-        tools:layout="@layout/fragment_showbook" />
+        tools:layout="@layout/fragment_showbook" >
+        <action
+            android:id="@+id/action_showbookFragment_to_addbookFragment"
+            app:destination="@id/addbookFragment" />
+    </fragment>
 </navigation>

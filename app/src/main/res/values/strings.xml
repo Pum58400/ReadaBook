@@ -20,4 +20,5 @@
     <string name="simple">Simple</string>
     <string name="description">simple</string>
     <string name="addbook">Addbook</string>
+    <string name="inputname">TittleBook</string>
 </resources>

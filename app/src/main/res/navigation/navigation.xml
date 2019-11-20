@@ -39,18 +39,18 @@
             android:id="@+id/action_addbookFragment_to_showbookFragment"
             app:destination="@id/showbookFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/showbookFragment"
-        android:name="buu.example.myapp.showbook.ShowbookFragment"
-        android:label="fragment_showbook"
-        tools:layout="@layout/fragment_showbook" >
-        <action
-            android:id="@+id/action_showbookFragment_to_addbookFragment"
-            app:destination="@id/addbookFragment" />
-    </fragment>
+
     <fragment
         android:id="@+id/bookFragment"
         android:name="buu.example.myapp.BookFragment"
         android:label="fragment_book"
         tools:layout="@layout/fragment_book" />
+    <fragment
+        android:id="@+id/showbookFragment"
+        android:name="ShowbookFragment"
+        android:label="ShowbookFragment" >
+        <action
+            android:id="@+id/action_showbookFragment_to_addbookFragment2"
+            app:destination="@id/addbookFragment" />
+    </fragment>
 </navigation>

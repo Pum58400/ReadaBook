@@ -17,4 +17,6 @@
     <string name="share_success_text">Share</string>
     <string name="search">Search</string>
     <string name="book">Book</string>
+    <string name="simple">Simple</string>
+    <string name="description">simple</string>
 </resources>

@@ -38,4 +38,9 @@
         android:name="buu.example.myapp.ListlibraryFragment"
         android:label="fragment_listlibrary"
         tools:layout="@layout/fragment_listlibrary" />
+    <fragment
+        android:id="@+id/randomlibraryFragment"
+        android:name="buu.example.myapp.RandomlibraryFragment"
+        android:label="fragment_randomlibrary"
+        tools:layout="@layout/fragment_randomlibrary" />
 </navigation>

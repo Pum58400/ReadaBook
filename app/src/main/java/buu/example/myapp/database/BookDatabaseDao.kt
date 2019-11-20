@@ -10,8 +10,8 @@ interface BookDatabaseDao {
     fun insert(user: Book)
 
 
-    @Query("SELECT * FROM  book WHERE bookId = :bookId")
-    fun getBook(bookId:Int) : Book?
+    @Query("SELECT * FROM  book WHERE bookname = :bookname")
+    fun getBook(bookname:String) : Book?
 
     @Query("SELECT * FROM book")
     fun getAll(): LiveData<List<Book>>

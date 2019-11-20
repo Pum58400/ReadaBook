@@ -22,6 +22,7 @@ import buu.example.myapp.databinding.FragmentAddbookBinding
 import com.google.android.material.snackbar.Snackbar
 
 
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -42,21 +43,23 @@ class AddbookFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
-        val binding: FragmentAddbookBinding = DataBindingUtil.inflate(inflater,
-        R.layout.fragment_addbook, container, false)
+        val binding: FragmentAddbookBinding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_addbook, container, false
+        )
+
         binding.buttonCancel.setOnClickListener {
             it.findNavController().navigate(R.id.action_addbookFragment_to_showbookFragment)
         }
 
         val application = requireNotNull(this.activity).application
-        val dataSource = Roomdb.getInstance(application).gymDao
+        val dataSource = Roomdb.getInstance(application).bookDao
         val viewmodelfactory = AddbookViewModelFactory(dataSource, application)
         val viewModel = ViewModelProviders.of(this, viewmodelfactory)
             .get(AddbookViewModel::class.java)
 
-        viewModel.gotoShowbook.observe(this, Observer {
+        viewModel.gotoHome.observe(this, Observer {
             if (it) {
                 findNavController().navigate(
                     AddbookFragmentDirections.actionAddbookFragmentToShowbookFragment()
@@ -75,12 +78,9 @@ class AddbookFragment : Fragment() {
 
         // Inflate the layout for this fragment
 
-        binding.addbookViewModel = viewModel
+         binding.addbookViewModel = viewModel
+
         return binding.root
-
     }
-
-
-
 
 }

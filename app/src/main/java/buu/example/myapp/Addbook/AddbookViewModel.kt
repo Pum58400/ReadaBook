@@ -15,56 +15,57 @@ class AddbookViewModel(val database: BookDatabaseDao, application: Application) 
     private var viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    //    var inputBookId = MutableLiveData<String>()
+//    var inputBookId = MutableLiveData<Int>()
     var inputNameBook = MutableLiveData<String>()
     var inputAnthor = MutableLiveData<String>()
     var inputPage = MutableLiveData<String>()
 
 
-    private var _gotoShowbook = MutableLiveData<Boolean>()
-    val gotoShowbook: LiveData<Boolean>
-        get() = _gotoShowbook
+
+    private var _gotoHome = MutableLiveData<Boolean>()
+    val gotoHome: LiveData<Boolean>
+        get() = _gotoHome
 
     private var _showSnackbarEvent = MutableLiveData<Boolean>()
     val showSnackBarEvent: LiveData<Boolean>
         get() = _showSnackbarEvent
 
     init {
-        Log.i("AddBookViewModel", "ViewModelCreate")
+        Log.i("AddbookViewModel", "ViewModelCreate")
     }
 
     fun clickButton() {
         uiScope.launch {
-            //            Log.i("AddBookViewModel","BookId :"+inputBookId.value)
-            Log.i("AddBookViewModel", "BookName :" + inputNameBook.value)
-            Log.i("AddBookViewModel", "Anthor :" + inputAnthor.value)
-            Log.i("AddBookViewModel", "Page :" + inputPage.value)
-
+//            Log.i("AddbookViewModel", "IDBook :" + inputBookId.value)
+            Log.i("AddbookViewModel", "NameBook :" + inputNameBook.value)
+            Log.i("AddbookViewModel", "Anthor :" + inputAnthor.value)
+            Log.i("AddbookViewModel", "Page :" + inputPage.value)
             if (checkMatchNotNull()) {
-                Log.i("AddBookViewModel", "get all " + showAll())
+                Log.i("AddbookViewModel", "get gym all " + showGymAll())
                 _showSnackbarEvent.value = true
             } else {
                 var newBook = Book(
+//                    bookId = inputBookId.value,
                     bookname = inputNameBook.value,
                     anthor = inputAnthor.value,
                     page = inputPage.value
                 )
                 insert(newBook)
-                Log.i("AddBookViewModel", "get  all " + showAll().toString())
-                _gotoShowbook.value = true
+                Log.i("AddbookViewModel", "get gym all " + showGymAll().toString())
+                _gotoHome.value = true
             }
         }
     }
 
-    private suspend fun showAll(): LiveData<List<Book>> {
+    private suspend fun showGymAll(): LiveData<List<Book>> {
         return withContext(Dispatchers.IO) {
             database.getAll()
         }
     }
 
-    private suspend fun insert(book: Book) {
+    private suspend fun insert(gym: Book) {
         withContext(Dispatchers.IO) {
-            database.insert(book)
+            database.insert(gym)
         }
     }
 
@@ -73,9 +74,9 @@ class AddbookViewModel(val database: BookDatabaseDao, application: Application) 
             || inputPage.value == null
             )
 
-    override fun onCleared() {
-        Log.i("RegisterViewModel", "ViewModelDestroy")
-        super.onCleared()
-        viewModelJob.cancel()
-    }
+//    override fun onCleared() {
+//        Log.i("RegisterViewModel", "ViewModelDestroy")
+//        super.onCleared()
+//        viewModelJob.cancel()
+//    }
 }

@@ -41,7 +41,7 @@ class AddbookViewModel(val database: BookDatabaseDao, application: Application) 
             Log.i("AddbookViewModel", "Anthor :" + inputAnthor.value)
             Log.i("AddbookViewModel", "Page :" + inputPage.value)
             if (checkMatchNotNull()) {
-                Log.i("AddbookViewModel", "get gym all " + showGymAll())
+                Log.i("AddbookViewModel", "get gym all " + showBookAll())
                 _showSnackbarEvent.value = true
             } else {
                 var newBook = Book(
@@ -51,13 +51,13 @@ class AddbookViewModel(val database: BookDatabaseDao, application: Application) 
                     page = inputPage.value
                 )
                 insert(newBook)
-                Log.i("AddbookViewModel", "get gym all " + showGymAll().toString())
+                Log.i("AddbookViewModel", "get book all " + showBookAll().toString())
                 _gotoHome.value = true
             }
         }
     }
 
-    private suspend fun showGymAll(): LiveData<List<Book>> {
+    private suspend fun showBookAll(): LiveData<List<Book>> {
         return withContext(Dispatchers.IO) {
             database.getAll()
         }
